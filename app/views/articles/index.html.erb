@@ -1,0 +1,35 @@
+<div class="clearfix">
+  <div class="float-left">
+    <h3>Articles</h3>
+  </div>
+  <div class="float-right">
+    <%= link_to 'New Article', new_article_path, class: 'btn btn-success' %>
+  </div>
+</div>
+
+<% if @articles.present? %>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">State</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @articles.each.with_index(1) do |article, index| %>
+          <tr>
+            <%= render 'articles/partials/listing', article: article, index: index %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <div>
+    No Articles Found!
+  </div>
+<% end %>

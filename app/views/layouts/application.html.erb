@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Articles</title>
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+
+  <body>
+    <%= render 'partials/public/header' %>
+
+    <div id="start-main-content" class="container">
+      <%= render 'partials/public/flash' %>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="bg-light p-3 rounded border-dark-gray">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= render 'partials/public/footer' %>
+
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

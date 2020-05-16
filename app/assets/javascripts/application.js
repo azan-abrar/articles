@@ -1,0 +1,10 @@
+//= require jquery
+//= require rails-ujs
+//= require jquery-ui
+//= require activestorage
+//= require popper
+//= require bootstrap
+//= require jquery-ui/widgets/autocomplete
+//= require parsley
+//= require articles
+//= require_tree .

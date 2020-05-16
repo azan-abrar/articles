@@ -1,0 +1,18 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Articles</h1>
+    <p class="lead">Search Articles</p>
+  </div>
+</div>
+
+<div id="main-search-form">
+  <%= form_tag search_path, remote: true, class: 'form-horizontal' do %>
+    <div class="row text-center">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <%= text_field_tag :search, nil, placeholder: 'Search for articles...', class: 'form-control', id: 'search_keyword' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,32 @@
+<header id="header">
+  <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar bg-dark navbar-dark">
+    <%= link_to root_path, class: 'navbar-brand' do %>
+      <strong>Articles</strong>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item <%= nav_active_class('home') %>">
+          <%= link_to root_path, class: 'nav-link' do %>
+            Home<span class="sr-only"></span>
+          <% end %>
+        </li>
+
+        <li class="nav-item <%= nav_active_class('articles') %>">
+          <%= link_to articles_path, class: 'nav-link' do %>
+            Articles
+          <% end %>
+        </li>
+
+        <li class="nav-item <%= nav_active_class('analytics') %>">
+          <%= link_to analytics_path, class: 'nav-link' do %>
+            Analytics
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

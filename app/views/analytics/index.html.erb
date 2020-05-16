@@ -1,0 +1,30 @@
+<div class="clearfix">
+  <div class="float-left">
+    <h3>Analytics</h3>
+  </div>
+</div>
+
+<% if @analytics.present? %>
+  <div class="table-responsive">  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Keyword</th>
+          <th scope="col">Search Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @analytics.each.with_index(1) do |analytic, index| %>
+          <tr>
+            <%= render 'analytics/partials/listing', analytic: analytic, index: index %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <div>
+    No Analytics Found!
+  </div>
+<% end %>
